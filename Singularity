@@ -3,7 +3,7 @@ From: kaldiasr/kaldi:gpu-2019-12
 
 %runscript
 
-    echo "Nothing to do here."
+    echo "Nothing to do here"
 
 %post
 
