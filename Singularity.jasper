@@ -6,14 +6,11 @@ From: nvidia/pytorch:19.09-py3
 
     echo "Nothing to do here."
 
-%files
-    requirements.txt /requirements.txt
-
 %post
 
     apt-get update
-    apt-get install -y libsndfile1
+    apt-get install -y libsndfile1 python3-pip
     apt-get install -y sox
     rm -rf /var/lib/apt/lists/*
 
-    pip install --disable-pip-version-check -U -r pandas==0.24.2 tqdm==4.31.1 ascii-graph==1.5.1 wrapt==1.10.11 librosa toml soundfile ipdb
+    pip3 install --disable-pip-version-check -U -r pandas==0.24.2 tqdm==4.31.1 ascii-graph==1.5.1 wrapt==1.10.11 librosa toml soundfile ipdb
